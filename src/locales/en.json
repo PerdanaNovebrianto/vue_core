@@ -1,3 +1,71 @@
 {
-    
+    "login": {
+        "title": "Welcome back",
+        "subtitle": "Sign in to your account to continue",
+        "email": "Email",
+        "email_placeholder": "you{'@'}example.com",
+        "password": "Password",
+        "password_placeholder": "Enter your password",
+        "remember_me": "Remember me",
+        "forgot_password": "Forgot password?",
+        "sign_in": "Sign in",
+        "no_account": "Don't have an account?",
+        "sign_up": "Sign up"
+    },
+    "dashboard": {
+        "title": "Dashboard",
+        "welcome": "Welcome back",
+        "welcome_sub": "Here's what's happening with your projects today.",
+        "nav": {
+            "dashboard": "Dashboard",
+            "projects": "Projects",
+            "team": "Team",
+            "reports": "Reports",
+            "settings": "Settings"
+        },
+        "stats": {
+            "total_revenue": "Total Revenue",
+            "new_users": "New Users",
+            "active_projects": "Active Projects",
+            "completion_rate": "Completion Rate",
+            "vs_last_month": "vs last month"
+        },
+        "recent_activity": "Recent Activity",
+        "table": {
+            "name": "Name",
+            "status": "Status",
+            "date": "Date",
+            "amount": "Amount"
+        },
+        "status": {
+            "completed": "Completed",
+            "in_progress": "In Progress",
+            "pending": "Pending",
+            "cancelled": "Cancelled"
+        },
+        "quick_actions": "Quick Actions",
+        "actions": {
+            "new_project": "New Project",
+            "invite_member": "Invite Member",
+            "generate_report": "Generate Report",
+            "view_analytics": "View Analytics"
+        },
+        "search_placeholder": "Search...",
+        "logout": "Logout"
+    },
+    "error": {
+        "go_home": "Go back home",
+        "403": {
+            "title": "Access denied",
+            "description": "You don't have permission to access this page. Please contact your administrator if you believe this is a mistake."
+        },
+        "404": {
+            "title": "Page not found",
+            "description": "Sorry, we couldn't find the page you're looking for. It might have been moved or no longer exists."
+        },
+        "500": {
+            "title": "Server error",
+            "description": "Something went wrong on our end. Please try again later or contact support if the problem persists."
+        }
+    }
 }

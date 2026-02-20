@@ -7,22 +7,34 @@
 export {}
 declare global {
   const EffectScope: typeof import('vue').EffectScope
+  const THEME_COLORS: typeof import('./src/utils/composables/useThemeColor.js').THEME_COLORS
   const computed: typeof import('vue').computed
+  const constants: typeof import('./src/utils/constants.js').default
+  const copyArray: typeof import('./src/utils/helpers.js').copyArray
   const createApp: typeof import('vue').createApp
   const customRef: typeof import('vue').customRef
   const defineAsyncComponent: typeof import('vue').defineAsyncComponent
   const defineComponent: typeof import('vue').defineComponent
   const effectScope: typeof import('vue').effectScope
+  const fileExtensionValidator: typeof import('./src/utils/validatorr.js').fileExtensionValidator
+  const fileSizeValidator: typeof import('./src/utils/validatorr.js').fileSizeValidator
   const getCurrentInstance: typeof import('vue').getCurrentInstance
   const getCurrentScope: typeof import('vue').getCurrentScope
   const getCurrentWatcher: typeof import('vue').getCurrentWatcher
+  const getInitials: typeof import('./src/utils/formatters.js').getInitials
   const h: typeof import('vue').h
+  const handleLocalPhoneNumberKeypress: typeof import('./src/utils/helpers.js').handleLocalPhoneNumberKeypress
   const inject: typeof import('vue').inject
+  const isEmpty: typeof import('./src/utils/helpers.js').isEmpty
+  const isEmptyArray: typeof import('./src/utils/helpers.js').isEmptyArray
+  const isFileAccept: typeof import('./src/utils/helpers.js').isFileAccept
+  const isObject: typeof import('./src/utils/helpers.js').isObject
   const isProxy: typeof import('vue').isProxy
   const isReactive: typeof import('vue').isReactive
   const isReadonly: typeof import('vue').isReadonly
   const isRef: typeof import('vue').isRef
   const isShallow: typeof import('vue').isShallow
+  const localPhoneNumberValidator: typeof import('./src/utils/validatorr.js').localPhoneNumberValidator
   const markRaw: typeof import('vue').markRaw
   const nextTick: typeof import('vue').nextTick
   const onActivated: typeof import('vue').onActivated
@@ -39,11 +51,16 @@ declare global {
   const onUnmounted: typeof import('vue').onUnmounted
   const onUpdated: typeof import('vue').onUpdated
   const onWatcherCleanup: typeof import('vue').onWatcherCleanup
+  const passwordPatternValidator: typeof import('./src/utils/validatorr.js').passwordPatternValidator
   const provide: typeof import('vue').provide
   const reactive: typeof import('vue').reactive
   const readonly: typeof import('vue').readonly
   const ref: typeof import('vue').ref
   const resolveComponent: typeof import('vue').resolveComponent
+  const sameValueValidator: typeof import('./src/utils/validatorr.js').sameValueValidator
+  const setCurrencyDigits: typeof import('./src/utils/formatters.js').setCurrencyDigits
+  const setCurrencyDigitsWithRp: typeof import('./src/utils/formatters.js').setCurrencyDigitsWithRp
+  const setUTCDate: typeof import('./src/utils/formatters.js').setUTCDate
   const shallowReactive: typeof import('vue').shallowReactive
   const shallowReadonly: typeof import('vue').shallowReadonly
   const shallowRef: typeof import('vue').shallowRef
@@ -56,10 +73,14 @@ declare global {
   const useAttrs: typeof import('vue').useAttrs
   const useCssModule: typeof import('vue').useCssModule
   const useCssVars: typeof import('vue').useCssVars
+  const useDarkMode: typeof import('./src/utils/composables/useDarkMode.js').useDarkMode
+  const useI18n: typeof import('vue-i18n').useI18n
   const useId: typeof import('vue').useId
+  const useLanguageSwitcher: typeof import('./src/utils/composables/useLanguageSwitcher.js').useLanguageSwitcher
   const useModel: typeof import('vue').useModel
   const useSlots: typeof import('vue').useSlots
   const useTemplateRef: typeof import('vue').useTemplateRef
+  const useThemeColor: typeof import('./src/utils/composables/useThemeColor.js').useThemeColor
   const watch: typeof import('vue').watch
   const watchEffect: typeof import('vue').watchEffect
   const watchPostEffect: typeof import('vue').watchPostEffect
@@ -78,22 +99,34 @@ declare module 'vue' {
   interface GlobalComponents {}
   interface ComponentCustomProperties {
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
+    readonly THEME_COLORS: UnwrapRef<typeof import('./src/utils/composables/useThemeColor.js')['THEME_COLORS']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
+    readonly constants: UnwrapRef<typeof import('./src/utils/constants.js')['default']>
+    readonly copyArray: UnwrapRef<typeof import('./src/utils/helpers.js')['copyArray']>
     readonly createApp: UnwrapRef<typeof import('vue')['createApp']>
     readonly customRef: UnwrapRef<typeof import('vue')['customRef']>
     readonly defineAsyncComponent: UnwrapRef<typeof import('vue')['defineAsyncComponent']>
     readonly defineComponent: UnwrapRef<typeof import('vue')['defineComponent']>
     readonly effectScope: UnwrapRef<typeof import('vue')['effectScope']>
+    readonly fileExtensionValidator: UnwrapRef<typeof import('./src/utils/validatorr.js')['fileExtensionValidator']>
+    readonly fileSizeValidator: UnwrapRef<typeof import('./src/utils/validatorr.js')['fileSizeValidator']>
     readonly getCurrentInstance: UnwrapRef<typeof import('vue')['getCurrentInstance']>
     readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>
     readonly getCurrentWatcher: UnwrapRef<typeof import('vue')['getCurrentWatcher']>
+    readonly getInitials: UnwrapRef<typeof import('./src/utils/formatters.js')['getInitials']>
     readonly h: UnwrapRef<typeof import('vue')['h']>
+    readonly handleLocalPhoneNumberKeypress: UnwrapRef<typeof import('./src/utils/helpers.js')['handleLocalPhoneNumberKeypress']>
     readonly inject: UnwrapRef<typeof import('vue')['inject']>
+    readonly isEmpty: UnwrapRef<typeof import('./src/utils/helpers.js')['isEmpty']>
+    readonly isEmptyArray: UnwrapRef<typeof import('./src/utils/helpers.js')['isEmptyArray']>
+    readonly isFileAccept: UnwrapRef<typeof import('./src/utils/helpers.js')['isFileAccept']>
+    readonly isObject: UnwrapRef<typeof import('./src/utils/helpers.js')['isObject']>
     readonly isProxy: UnwrapRef<typeof import('vue')['isProxy']>
     readonly isReactive: UnwrapRef<typeof import('vue')['isReactive']>
     readonly isReadonly: UnwrapRef<typeof import('vue')['isReadonly']>
     readonly isRef: UnwrapRef<typeof import('vue')['isRef']>
     readonly isShallow: UnwrapRef<typeof import('vue')['isShallow']>
+    readonly localPhoneNumberValidator: UnwrapRef<typeof import('./src/utils/validatorr.js')['localPhoneNumberValidator']>
     readonly markRaw: UnwrapRef<typeof import('vue')['markRaw']>
     readonly nextTick: UnwrapRef<typeof import('vue')['nextTick']>
     readonly onActivated: UnwrapRef<typeof import('vue')['onActivated']>
@@ -110,11 +143,16 @@ declare module 'vue' {
     readonly onUnmounted: UnwrapRef<typeof import('vue')['onUnmounted']>
     readonly onUpdated: UnwrapRef<typeof import('vue')['onUpdated']>
     readonly onWatcherCleanup: UnwrapRef<typeof import('vue')['onWatcherCleanup']>
+    readonly passwordPatternValidator: UnwrapRef<typeof import('./src/utils/validatorr.js')['passwordPatternValidator']>
     readonly provide: UnwrapRef<typeof import('vue')['provide']>
     readonly reactive: UnwrapRef<typeof import('vue')['reactive']>
     readonly readonly: UnwrapRef<typeof import('vue')['readonly']>
     readonly ref: UnwrapRef<typeof import('vue')['ref']>
     readonly resolveComponent: UnwrapRef<typeof import('vue')['resolveComponent']>
+    readonly sameValueValidator: UnwrapRef<typeof import('./src/utils/validatorr.js')['sameValueValidator']>
+    readonly setCurrencyDigits: UnwrapRef<typeof import('./src/utils/formatters.js')['setCurrencyDigits']>
+    readonly setCurrencyDigitsWithRp: UnwrapRef<typeof import('./src/utils/formatters.js')['setCurrencyDigitsWithRp']>
+    readonly setUTCDate: UnwrapRef<typeof import('./src/utils/formatters.js')['setUTCDate']>
     readonly shallowReactive: UnwrapRef<typeof import('vue')['shallowReactive']>
     readonly shallowReadonly: UnwrapRef<typeof import('vue')['shallowReadonly']>
     readonly shallowRef: UnwrapRef<typeof import('vue')['shallowRef']>
@@ -127,10 +165,14 @@ declare module 'vue' {
     readonly useAttrs: UnwrapRef<typeof import('vue')['useAttrs']>
     readonly useCssModule: UnwrapRef<typeof import('vue')['useCssModule']>
     readonly useCssVars: UnwrapRef<typeof import('vue')['useCssVars']>
+    readonly useDarkMode: UnwrapRef<typeof import('./src/utils/composables/useDarkMode.js')['useDarkMode']>
+    readonly useI18n: UnwrapRef<typeof import('vue-i18n')['useI18n']>
     readonly useId: UnwrapRef<typeof import('vue')['useId']>
+    readonly useLanguageSwitcher: UnwrapRef<typeof import('./src/utils/composables/useLanguageSwitcher.js')['useLanguageSwitcher']>
     readonly useModel: UnwrapRef<typeof import('vue')['useModel']>
     readonly useSlots: UnwrapRef<typeof import('vue')['useSlots']>
     readonly useTemplateRef: UnwrapRef<typeof import('vue')['useTemplateRef']>
+    readonly useThemeColor: UnwrapRef<typeof import('./src/utils/composables/useThemeColor.js')['useThemeColor']>
     readonly watch: UnwrapRef<typeof import('vue')['watch']>
     readonly watchEffect: UnwrapRef<typeof import('vue')['watchEffect']>
     readonly watchPostEffect: UnwrapRef<typeof import('vue')['watchPostEffect']>

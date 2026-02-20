@@ -6,18 +6,22 @@ A Vue 3 starter template with a pre-configured UI and developer experience stack
 
 - **Vue 3** with `<script setup>` SFC syntax
 - **Vite** for fast dev server and build
-- **PrimeVue 4** (Aura theme, zinc color preset) with auto-imported components
+- **PrimeVue 4** (Aura theme) with auto-imported components
 - **Tailwind CSS 4** with `tailwindcss-primeui` integration
 - **Font Awesome 7** (free) for icons
 - **Vue I18n** for internationalization (English, Bahasa Indonesia)
+- **Vue Router 4** with lazy-loaded routes
+- **vite-svg-loader** for inline SVG components
 
 ## Features
 
 - **Dark Mode** — toggle with system preference detection and localStorage persistence, synced across PrimeVue and Tailwind via a shared CSS class selector
-- **Internationalization** — locale auto-detection from browser, switchable at runtime, persisted to localStorage
-- **Auto Imports** — Vue APIs and PrimeVue components are auto-imported (no manual import statements needed)
-- **Custom PrimeVue Theme** — Aura base with a full zinc primary/surface palette for both light and dark schemes
+- **Theme Color Picker** — switch the entire app's primary and surface palette at runtime (zinc, slate, stone, blue, green, red, orange, amber, violet, rose) with localStorage persistence
+- **Internationalization** — locale auto-detection from browser, switchable at runtime with a dropdown or compact flag toggle, persisted to localStorage
+- **Auto Imports** — Vue APIs, vue-i18n, and composables are auto-imported; PrimeVue components resolve via `PrimeVueResolver`
+- **Custom PrimeVue Theme** — Aura base with a dynamic `createPreset()` function that generates primary/surface palettes from any color name
 - **CSS Layering** — ordered `theme, base, primevue` layers to keep style specificity predictable
+- **unDraw Illustrations** — SVG illustrations with `currentColor` accent, dynamically themed via the `UndrawSvg` wrapper component
 
 ## Getting Started
 
@@ -38,14 +42,29 @@ npm run dev
 
 ```
 src/
-├── locales/            # i18n translation JSON files (en, id)
+├── assets/                         # Assets directory
+├── components/                     # Re-useable component directory
+├── locales/                        # i18n translation JSON files (en, id)
+├── pages/
+│   ├── auth/                       # Auth Pages                   
+│   ├── admin/                      # Admin Pages
+│   └── error/                      # Error Pages
 ├── plugins/
-│   ├── i18n.js         # Vue I18n configuration
-│   └── primevue.js     # PrimeVue theme preset
+│   ├── i18n.js                     # Vue I18n configuration
+│   └── primevue.js                 # Dynamic PrimeVue theme preset
+├── routes/
+│   ├── index.js                    # Router instance with guards
+│   └── route/                      # Routes directory
 ├── utils/
-│   └── composables/
-│       └── useDarkMode.js  # Dark mode composable
-├── App.vue             # Root component
-├── main.js             # App entry point
-└── style.css           # Tailwind + PrimeUI imports, dark mode variant
+│   ├── composables/
+│   │   ├── useDarkMode.js          # Dark mode state and toggle
+│   │   ├── useLanguageSwitcher.js  # Locale switching
+│   │   └── useThemeColor.js        # Runtime theme color switching
+│   ├── constants.js
+│   ├── formatters.js
+│   ├── helpers.js
+│   └── validatorr.js
+├── App.vue                         # Root component (router-view)
+├── main.js                         # App entry point
+└── style.css                       # Tailwind + PrimeUI imports, dark mode variant
 ```

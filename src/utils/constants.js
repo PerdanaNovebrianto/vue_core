@@ -1,6 +1,5 @@
 const constants = {
-  base_url: import.meta.env.VITE_BASE_URL,
-  crypto_key: import.meta.env.VITE_CRYPTO_KEY,
+  app_name: import.meta.env.VITE_APP_NAME,
 }
 
 export default constants
