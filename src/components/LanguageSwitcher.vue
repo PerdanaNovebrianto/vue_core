@@ -1,48 +1,49 @@
 <script setup>
 const { locale, locales, switchLocale } = useLanguageSwitcher()
+const op = ref()
 
-defineProps({
-  compact: { type: Boolean, default: false }
-})
+const currentCode = computed(() => locale.value.toUpperCase())
+
+function toggle(event) {
+  op.value.toggle(event)
+}
 </script>
 
 <template>
-  <!-- Full dropdown -->
-  <Select
-    v-if="!compact"
-    :modelValue="locale"
-    @update:modelValue="switchLocale($event)"
-    :options="locales"
-    optionLabel="name"
-    optionValue="code"
-    class="w-44"
-  >
-    <template #value="{ value }">
-      <span class="flex items-center gap-2 text-sm">
-        <span>{{ locales.find(l => l.code === value)?.flag }}</span>
-        <span>{{ locales.find(l => l.code === value)?.name }}</span>
-      </span>
-    </template>
-    <template #option="{ option }">
-      <span class="flex items-center gap-2 text-sm">
-        <span>{{ option.flag }}</span>
-        <span>{{ option.name }}</span>
-      </span>
-    </template>
-  </Select>
-
-  <!-- Compact flag-only toggle -->
   <Button
-    v-else
-    @click="switchLocale(locale === 'en' ? 'id' : 'en')"
+    @click="toggle"
     text
     rounded
     severity="secondary"
-    class="w-10! h-10!"
+    class="h-8! px-3! py-1! gap-2! border-primary-200 dark:border-primary-700"
     aria-label="Switch language"
   >
-    <template #icon>
-      <span class="text-base">{{ locales.find(l => l.code === locale)?.flag }}</span>
-    </template>
+    <i class="fa-solid fa-language text-sm text-primary-500" />
+    <div class="min-w-[20px]">
+      <span class="text-xs text-surface-800 dark:text-surface-100 font-semibold tracking-wide">{{ currentCode }}</span>
+    </div>
   </Button>
+
+  <Popover ref="op" :pt="{content: 'p-2'}">
+    <div class="w-48">
+      <div class="flex flex-col gap-2">
+        <Button
+          v-for="item in locales"
+          :key="item.code"
+          @click="switchLocale(item.code)"
+          type="button"
+          class="w-full cursor-pointer flex items-center justify-between gap-3 rounded-lg p-2 text-sm text-left transition-colors border-none bg-transparent hover:bg-primary-100 dark:hover:bg-primary-900/20"
+        >
+          <span class="flex items-center gap-2 text-surface-800 dark:text-surface-100">
+            <span>{{ item.flag }}</span>
+            <span>{{ item.name }}</span>
+          </span>
+          <i
+            v-if="locale === item.code"
+            class="fa-solid fa-check text-xs text-primary-500"
+          />
+        </Button>
+      </div>
+    </div>
+  </Popover>
 </template>

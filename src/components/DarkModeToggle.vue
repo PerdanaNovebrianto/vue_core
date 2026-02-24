@@ -9,7 +9,7 @@ const { isDark, toggleDarkMode } = useDarkMode()
     rounded
     severity="secondary"
     aria-label="Toggle dark mode"
-    class="w-10! h-10!"
+    class="w-8! h-8!"
   >
     <template #icon>
       <i :class="isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon'" class="text-base" />

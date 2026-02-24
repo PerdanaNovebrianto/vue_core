@@ -17,7 +17,7 @@ function toggle(event) {
     rounded
     severity="secondary"
     aria-label="Change theme color"
-    class="w-10! h-10!"
+    class="w-8! h-8!"
   >
     <template #icon>
       <span
@@ -28,13 +28,13 @@ function toggle(event) {
   </Button>
 
   <Popover ref="op">
-    <div class="p-3 w-48">
-      <div class="grid grid-cols-5 gap-2">
+    <div class="w-48">
+      <div class="grid grid-cols-5 gap-4">
         <button
           v-for="color in colors"
           :key="color.code"
           @click="setThemeColor(color.code)"
-          class="w-8 h-8 rounded-full transition-transform hover:scale-110 cursor-pointer flex items-center justify-center"
+          class="w-6 h-6 rounded-full transition-transform hover:scale-110 cursor-pointer flex items-center justify-center"
           :style="{ backgroundColor: color.hex }"
           :title="color.name"
         >

@@ -1,4 +1,4 @@
-import { updatePrimaryPalette, updateSurfacePalette } from '@primeuix/themes'
+import { updatePrimaryPalette } from '@primeuix/themes'
 
 const STORAGE_KEY = 'theme-color'
 const SHADES = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950]
@@ -25,7 +25,6 @@ const currentColor = ref(localStorage.getItem(STORAGE_KEY) || 'zinc')
 function apply(color) {
   const palette = buildPalette(color)
   updatePrimaryPalette(palette)
-  updateSurfacePalette({ 0: '#ffffff', ...palette })
   localStorage.setItem(STORAGE_KEY, color)
 }
 

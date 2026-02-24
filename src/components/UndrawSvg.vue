@@ -13,5 +13,10 @@ const accentColor = computed(() =>
 </script>
 
 <template>
-  <component :is="svg" :style="{ color: accentColor }" />
+  <component
+    :is="svg"
+    preserveAspectRatio="xMidYMid meet"
+    class="block w-full h-auto overflow-visible"
+    :style="{ color: accentColor }"
+  />
 </template>
