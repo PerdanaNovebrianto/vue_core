@@ -10,11 +10,11 @@ const { t } = useI18n()
     <div class="w-full max-w-3xs mx-auto mb-10">
       <UndrawSvg :svg="ServerErrorSvg" />
     </div>
-    <p class="text-7xl font-extrabold text-surface-900 dark:text-surface-0 mb-2">500</p>
-    <h1 class="text-2xl font-bold text-surface-900 dark:text-surface-0 mb-3">
+    <p class="text-7xl font-extrabold text-surface-800 dark:text-surface-0 mb-2">500</p>
+    <h1 class="text-2xl font-bold text-surface-800 dark:text-surface-0 mb-3">
       {{ t('error.500.title') }}
     </h1>
-    <p class="text-surface-500 dark:text-surface-400 mb-8 max-w-md mx-auto">
+    <p class="text-surface-600 dark:text-surface-300 mb-8 max-w-md mx-auto">
       {{ t('error.500.description') }}
     </p>
     <router-link :to="{ name: 'Login' }" custom v-slot="{ navigate }">

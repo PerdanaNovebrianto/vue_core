@@ -39,7 +39,7 @@ async function handleLogin() {
 
         <!-- Email -->
         <div class="flex flex-col gap-2">
-          <label for="email" class="text-sm font-medium text-surface-800 dark:text-surface-50">
+          <label for="email" class="text-sm font-medium text-surface-800 dark:text-surface-0">
             {{ t('login.email') }}
           </label>
           <InputText
@@ -53,7 +53,7 @@ async function handleLogin() {
 
         <!-- Password -->
         <div class="flex flex-col gap-2">
-          <label for="password" class="text-sm font-medium text-surface-800 dark:text-surface-50">
+          <label for="password" class="text-sm font-medium text-surface-800 dark:text-surface-0">
             {{ t('login.password') }}
           </label>
           <Password
