@@ -53,27 +53,12 @@ src/
 ├── assets/                         # Assets directory
 ├── components/                     # Re-useable component directory
 ├── locales/                        # i18n translation JSON files (en, id)
-├── pages/
-│   ├── auth/                       # Auth Pages                   
-│   ├── admin/                      # Admin Pages
-│   └── error/                      # Error Pages
-├── plugins/
-│   ├── i18n.js                     # Vue I18n configuration
-│   └── primevue.js                 # Dynamic PrimeVue theme preset
-├── routes/
-│   ├── index.js                    # Router instance with guards
-│   └── route/                      # Routes directory
-├── stores/                         # State management directory
-├── utils/
-│   ├── composables/
-│   │   ├── useDarkMode.js          # Dark mode state and toggle
-│   │   ├── useLanguageSwitcher.js  # Locale switching
-│   │   └── useThemeColor.js        # Runtime theme color switching
-│   ├── constants.js
-│   ├── formatters.js
-│   ├── helpers.js
-│   └── validatorr.js
+├── pages/                          # Pages directory
+├── plugins/                        # Plugins configuration directory
+├── routes/                         # Routes directory
+├── stores/                         # States management directory
+├── utils/                          # Utilities directory (composables, constants, formatters, etc.)
 ├── App.vue                         # Root component (router-view)
 ├── main.js                         # App entry point
-└── style.css                       # Tailwind + PrimeUI imports, dark mode variant
+└── style.css                       # Tailwind + PrimeUI imports, dark mode variant, custom styles
 ```
