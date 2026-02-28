@@ -20,7 +20,7 @@ A Vue 3 starter template with a pre-configured UI and developer experience stack
 ## Features
 
 - **Dark Mode** — toggle with system preference detection and localStorage persistence, synced across PrimeVue and Tailwind via a shared CSS class selector
-- **Theme Color Picker** — switch the entire app's primary and surface palette at runtime (zinc, slate, stone, blue, green, red, orange, amber, violet, rose) with localStorage persistence
+- **Theme Color Picker** — switch the entire app's primary and surface palette at runtime with localStorage persistence
 - **Internationalization** — locale auto-detection from browser, switchable at runtime with a dropdown or compact flag toggle, persisted to localStorage
 - **Store with Pinia** — session and state are handled in a dedicated store for easier route guard and component integration
 - **Axios Plugin** — centralized request/response interceptors for token handling, consistent API config, and unified error flow
