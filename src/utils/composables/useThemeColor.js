@@ -5,15 +5,15 @@ const SHADES = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950]
 
 export const THEME_COLORS = [
   { name: 'Zinc',   code: 'zinc',   hex: '#71717a' },
-  { name: 'Slate',  code: 'slate',  hex: '#64748b' },
-  { name: 'Stone',  code: 'stone',  hex: '#78716c' },
   { name: 'Blue',   code: 'blue',   hex: '#3b82f6' },
+  { name: 'Cyan',   code: 'cyan',   hex: '#06b6d4' },
   { name: 'Green',  code: 'green',  hex: '#22c55e' },
+  { name: 'Lime',   code: 'lime',   hex: '#84cc16' },
   { name: 'Red',    code: 'red',    hex: '#ef4444' },
+  { name: 'Pink',   code: 'pink',   hex: '#ec4899' },
   { name: 'Orange', code: 'orange', hex: '#f97316' },
   { name: 'Amber',  code: 'amber',  hex: '#f59e0b' },
   { name: 'Violet', code: 'violet', hex: '#8b5cf6' },
-  { name: 'Rose',   code: 'rose',   hex: '#f43f5e' },
 ]
 
 function buildPalette(color) {

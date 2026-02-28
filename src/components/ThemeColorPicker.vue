@@ -12,12 +12,12 @@ function toggle(event) {
 
 <template>
   <Button
-    @click="toggle"
     text
     rounded
     severity="secondary"
     aria-label="Change theme color"
     class="w-8! h-8!"
+    @click="toggle"
   >
     <template #icon>
       <span
@@ -33,10 +33,10 @@ function toggle(event) {
         <button
           v-for="color in colors"
           :key="color.code"
-          @click="setThemeColor(color.code)"
           class="w-6 h-6 rounded-full transition-transform hover:scale-110 cursor-pointer flex items-center justify-center"
           :style="{ backgroundColor: color.hex }"
           :title="color.name"
+          @click="setThemeColor(color.code)"
         >
           <i
             v-if="currentColor === color.code"

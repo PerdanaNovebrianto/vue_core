@@ -41,13 +41,15 @@ const leftPanelStyle = computed(() => {
         :style="leftPanelStyle"
       >
         <div class="w-full max-w-xl text-center">
-          <UndrawSvg :svg="LoginSvg" class="w-full max-w-lg mx-auto scale-x-[-1]" />
+          <UndrawSvg
+            :svg="LoginSvg"
+            class="w-full max-w-lg mx-auto scale-x-[-1]"
+          />
         </div>
       </div>
 
       <!-- Right form panel -->
       <div class="flex flex-col bg-surface-0 dark:bg-surface-900">
-
         <!-- Utilities -->
         <div class="flex items-center justify-end gap-2 p-4 lg:p-6">
           <LanguageSwitcher />

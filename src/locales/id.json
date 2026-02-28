@@ -1,71 +1,54 @@
 {
-    "login": {
-        "title": "Selamat datang kembali",
-        "subtitle": "Masuk ke akun Anda untuk melanjutkan",
-        "email": "Email",
-        "email_placeholder": "anda{'@'}contoh.com",
-        "password": "Kata sandi",
-        "password_placeholder": "Masukkan kata sandi Anda",
-        "remember_me": "Ingat saya",
-        "forgot_password": "Lupa kata sandi?",
-        "sign_in": "Masuk",
-        "no_account": "Belum punya akun?",
-        "sign_up": "Daftar"
+  "dashboard": {
+    "logout": "Keluar",
+    "nav": {
+      "dashboard": "Dasbor",
+      "projects": "Proyek",
+      "reports": "Laporan",
+      "settings": "Pengaturan",
+      "team": "Tim"
     },
-    "dashboard": {
-        "title": "Dasbor",
-        "welcome": "Selamat datang kembali",
-        "welcome_sub": "Berikut perkembangan proyek Anda hari ini.",
-        "nav": {
-            "dashboard": "Dasbor",
-            "projects": "Proyek",
-            "team": "Tim",
-            "reports": "Laporan",
-            "settings": "Pengaturan"
-        },
-        "stats": {
-            "total_revenue": "Total Pendapatan",
-            "new_users": "Pengguna Baru",
-            "active_projects": "Proyek Aktif",
-            "completion_rate": "Tingkat Penyelesaian",
-            "vs_last_month": "vs bulan lalu"
-        },
-        "recent_activity": "Aktivitas Terbaru",
-        "table": {
-            "name": "Nama",
-            "status": "Status",
-            "date": "Tanggal",
-            "amount": "Jumlah"
-        },
-        "status": {
-            "completed": "Selesai",
-            "in_progress": "Berlangsung",
-            "pending": "Tertunda",
-            "cancelled": "Dibatalkan"
-        },
-        "quick_actions": "Aksi Cepat",
-        "actions": {
-            "new_project": "Proyek Baru",
-            "invite_member": "Undang Anggota",
-            "generate_report": "Buat Laporan",
-            "view_analytics": "Lihat Analitik"
-        },
-        "search_placeholder": "Cari...",
-        "logout": "Keluar"
+    "title": "Dasbor",
+    "welcome": "Selamat datang kembali",
+    "welcome_sub": "Berikut perkembangan proyek Anda hari ini."
+  },
+  "error": {
+    "403": {
+      "description": "Anda tidak memiliki izin untuk mengakses halaman ini. Silakan hubungi administrator jika Anda merasa ini adalah kesalahan.",
+      "title": "Akses ditolak"
     },
-    "error": {
-        "go_home": "Kembali ke beranda",
-        "403": {
-            "title": "Akses ditolak",
-            "description": "Anda tidak memiliki izin untuk mengakses halaman ini. Silakan hubungi administrator jika Anda merasa ini adalah kesalahan."
-        },
-        "404": {
-            "title": "Halaman tidak ditemukan",
-            "description": "Maaf, kami tidak dapat menemukan halaman yang Anda cari. Halaman mungkin telah dipindahkan atau tidak lagi tersedia."
-        },
-        "500": {
-            "title": "Kesalahan server",
-            "description": "Terjadi kesalahan di sisi kami. Silakan coba lagi nanti atau hubungi dukungan jika masalah berlanjut."
-        }
-    }
+    "404": {
+      "description": "Maaf, kami tidak dapat menemukan halaman yang Anda cari. Halaman mungkin telah dipindahkan atau tidak lagi tersedia.",
+      "title": "Halaman tidak ditemukan"
+    },
+    "500": {
+      "description": "Terjadi kesalahan di sisi kami. Silakan coba lagi nanti atau hubungi dukungan jika masalah berlanjut.",
+      "title": "Kesalahan server"
+    },
+    "go_home": "Kembali ke beranda",
+    "network_error": "Terjadi kesalahan saat mengirim request",
+    "network_error_message": "Terjadi kesalahan saat mengirim request. Silakan coba lagi nanti atau hubungi dukungan jika masalah berlanjut.",
+    "server_error": "Kesalahan server",
+    "server_error_message": "Terjadi kesalahan di sisi kami. Silakan coba lagi nanti atau hubungi dukungan jika masalah berlanjut."
+  },
+  "login": {
+    "email": "Email",
+    "email_placeholder": "anda{'@'}contoh.com",
+    "forgot_password": "Lupa kata sandi?",
+    "no_account": "Belum punya akun?",
+    "password": "Kata sandi",
+    "password_placeholder": "Masukkan kata sandi Anda",
+    "remember_me": "Ingat saya",
+    "sign_in": "Masuk",
+    "sign_up": "Daftar",
+    "subtitle": "Masuk ke akun Anda untuk melanjutkan",
+    "title": "Selamat datang kembali"
+  },
+  "validation": {
+    "error": "Validasi error",
+    "error_message": "Mohon isi semua data dengan benar.",
+    "format_email": "Format email salah",
+    "required_fill": "Wajib diisi",
+    "required_select": "Wajib dipilih"
+  }
 }

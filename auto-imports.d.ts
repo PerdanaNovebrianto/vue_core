@@ -56,6 +56,7 @@ declare global {
   const reactive: typeof import('vue').reactive
   const readonly: typeof import('vue').readonly
   const ref: typeof import('vue').ref
+  const registerToast: typeof import('./src/utils/composables/useToast.js').registerToast
   const resolveComponent: typeof import('vue').resolveComponent
   const sameValueValidator: typeof import('./src/utils/validatorr.js').sameValueValidator
   const setCurrencyDigits: typeof import('./src/utils/formatters.js').setCurrencyDigits
@@ -81,6 +82,7 @@ declare global {
   const useSlots: typeof import('vue').useSlots
   const useTemplateRef: typeof import('vue').useTemplateRef
   const useThemeColor: typeof import('./src/utils/composables/useThemeColor.js').useThemeColor
+  const useToast: typeof import('./src/utils/composables/useToast.js').useToast
   const watch: typeof import('vue').watch
   const watchEffect: typeof import('vue').watchEffect
   const watchPostEffect: typeof import('vue').watchPostEffect
@@ -148,6 +150,7 @@ declare module 'vue' {
     readonly reactive: UnwrapRef<typeof import('vue')['reactive']>
     readonly readonly: UnwrapRef<typeof import('vue')['readonly']>
     readonly ref: UnwrapRef<typeof import('vue')['ref']>
+    readonly registerToast: UnwrapRef<typeof import('./src/utils/composables/useToast.js')['registerToast']>
     readonly resolveComponent: UnwrapRef<typeof import('vue')['resolveComponent']>
     readonly sameValueValidator: UnwrapRef<typeof import('./src/utils/validatorr.js')['sameValueValidator']>
     readonly setCurrencyDigits: UnwrapRef<typeof import('./src/utils/formatters.js')['setCurrencyDigits']>
@@ -173,6 +176,7 @@ declare module 'vue' {
     readonly useSlots: UnwrapRef<typeof import('vue')['useSlots']>
     readonly useTemplateRef: UnwrapRef<typeof import('vue')['useTemplateRef']>
     readonly useThemeColor: UnwrapRef<typeof import('./src/utils/composables/useThemeColor.js')['useThemeColor']>
+    readonly useToast: UnwrapRef<typeof import('./src/utils/composables/useToast.js')['useToast']>
     readonly watch: UnwrapRef<typeof import('vue')['watch']>
     readonly watchEffect: UnwrapRef<typeof import('vue')['watchEffect']>
     readonly watchPostEffect: UnwrapRef<typeof import('vue')['watchPostEffect']>
